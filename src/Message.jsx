@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Message = ({name, text, timestamp}) => {
   const time = timestamp.toTimeString();
@@ -15,6 +16,12 @@ const Message = ({name, text, timestamp}) => {
       </p>
     </div>
   );
+};
+
+Message.propTypes = {
+  name: PropTypes.string,
+  text: PropTypes.string.isRequired,
+  timestamp: PropTypes.instanceOf(Date).isRequired,
 };
 
 export default Message;
