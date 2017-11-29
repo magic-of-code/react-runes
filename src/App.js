@@ -13,11 +13,20 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <Message name="Arch" text="A bunch of new text." timestamp={new Date()} />
-        <Message text="Message without a name" timestamp={new Date()} />
+        <div style={styles.messages}>
+          <Message name="Arch" text="A bunch of new text." timestamp={new Date()} />
+          <Message text="Message without a name" timestamp={new Date()} />
+        </div>
       </div>
     );
   }
 }
+
+const styles = {
+  messages: {
+    width: '50%',
+    margin: '0 auto',
+  },
+};
 
 export default App;

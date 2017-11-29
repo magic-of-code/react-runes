@@ -5,13 +5,13 @@ const Message = ({name, text, timestamp}) => {
   const time = timestamp.toTimeString();
   return (
     <div>
-      <span>
+      <span style={styles.time}>
         {time}
       </span>
-      <span>
+      <span style={styles.name}>
         {name}
       </span>
-      <p>
+      <p style={styles.text}>
         {text}
       </p>
     </div>
@@ -26,6 +26,20 @@ Message.propTypes = {
 
 Message.defaultProps = {
   name: 'Anonymous',
+};
+
+const styles = {
+  name: {
+    fontWeight: 'bold',
+  },
+  text: {
+    marginTop: 0,
+  },
+  time: {
+    color: 'grey',
+    fontSize: '.8rem',
+    marginRight: '1rem',
+  },
 };
 
 export default Message;
