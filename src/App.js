@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 
 import Message from './Message';
+import MessagesList from './MessagesList';
 
 import logo from './logo.svg';
 import './App.css';
+
+const messages = [
+  {name: 'Arch', text: 'A bunch of new text.', timestamp: new Date()},
+  {text: 'Message without a name', timestamp: new Date()},
+];
 
 class App extends Component {
   render() {
@@ -14,8 +20,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div style={styles.messages}>
-          <Message name="Arch" text="A bunch of new text." timestamp={new Date()} />
-          <Message text="Message without a name" timestamp={new Date()} />
+          <MessagesList messages={messages} />
         </div>
       </div>
     );
