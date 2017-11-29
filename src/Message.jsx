@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-const Message = () => {
+const Message = ({text}) => {
   return (
     <div>
-      Some message here.
+      {text}
     </div>
   );
 };
