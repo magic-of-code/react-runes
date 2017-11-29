@@ -14,6 +14,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <Message name="Arch" text="A bunch of new text." timestamp={new Date()} />
+        <Message text="Message without a name" timestamp={new Date()} />
       </div>
     );
   }

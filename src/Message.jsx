@@ -24,4 +24,8 @@ Message.propTypes = {
   timestamp: PropTypes.instanceOf(Date).isRequired,
 };
 
+Message.defaultProps = {
+  name: 'Anonymous',
+};
+
 export default Message;
