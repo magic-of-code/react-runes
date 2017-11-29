@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
+
+import Message from './Message';
+
 import logo from './logo.svg';
 import './App.css';
-
-const Message = () => {
-  return (
-    <div>
-      Some message here.
-    </div>
-  );
-};
 
 class App extends Component {
   render() {
