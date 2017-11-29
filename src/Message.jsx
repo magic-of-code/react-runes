@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
 
-const Message = ({text}) => {
+const Message = ({name, text, timestamp}) => {
+  const time = timestamp.toTimeString();
   return (
     <div>
-      {text}
+      <span>
+        {time}
+      </span>
+      <span>
+        {name}
+      </span>
+      <p>
+        {text}
+      </p>
     </div>
   );
 };

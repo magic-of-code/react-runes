@@ -13,7 +13,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <Message text="A bunch of new text." />
+        <Message name="Arch" text="A bunch of new text." timestamp={new Date()} />
       </div>
     );
   }
