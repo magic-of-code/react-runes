@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Message = ({name, text, timestamp}) => {
+const Message = ({compact, name, text, timestamp}) => {
   const time = timestamp.toTimeString();
   return (
     <div>
@@ -11,7 +11,7 @@ const Message = ({name, text, timestamp}) => {
       <span style={styles.name}>
         {name}
       </span>
-      <p style={styles.text}>
+      <p style={compact ? styles.textCompact : styles.text}>
         {text}
       </p>
     </div>
@@ -19,6 +19,7 @@ const Message = ({name, text, timestamp}) => {
 };
 
 Message.propTypes = {
+  compact: PropTypes.bool.isRequired,
   name: PropTypes.string,
   text: PropTypes.string.isRequired,
   timestamp: PropTypes.instanceOf(Date).isRequired,
@@ -34,6 +35,10 @@ const styles = {
   },
   text: {
     marginTop: 0,
+  },
+  textCompact: {
+    display: 'inline',
+    marginLeft: '1rem',
   },
   time: {
     color: 'grey',

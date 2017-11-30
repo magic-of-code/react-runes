@@ -19,7 +19,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div style={styles.messages}>
-          <MessagesList messages={messages} />
+          <MessagesList compact={true} messages={messages} />
         </div>
       </div>
     );
