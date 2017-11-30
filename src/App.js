@@ -11,7 +11,14 @@ const messages = [
 ];
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {compact: false};
+  }
+
   render() {
+    const {compact} = this.state;
+
     return (
       <div className="App">
         <header className="App-header">
@@ -19,7 +26,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div style={styles.messages}>
-          <MessagesList compact={true} messages={messages} />
+          <MessagesList compact={compact} messages={messages} />
         </div>
       </div>
     );
